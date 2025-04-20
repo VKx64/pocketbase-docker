@@ -1,0 +1,20 @@
+services:
+  pocketbase:
+    # Build the Docker image using the Dockerfile in the current directory (.)
+    build: .
+    image: my-pocketbase-app
+    container_name: pb-instance
+    restart: unless-stopped
+    ports:
+      - "8228:8080"
+    volumes:
+      - pocketbase_data:/pb/pb_data
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:8080/api/health || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+volumes:
+  pocketbase_data:
+    driver: local
