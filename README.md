@@ -15,7 +15,7 @@ Make sure you have these installed:
 
 ## :gear: Getting Started
 
-1.  **Get Files:** Save the `Dockerfile` and `docker-compose.yaml` (provided in our previous conversation) into a new empty directory on your computer.
+1.  **Get Files:** Save the `Dockerfile` and `docker-compose.yaml` into a new empty directory on your computer.
 
 2.  **Navigate:** Open your terminal or command prompt and `cd` into that directory:
     ```bash
